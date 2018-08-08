@@ -1,6 +1,5 @@
-from linkedin.linkedin import (LinkedInAuthentication, LinkedInApplication,
-                               PERMISSIONS)
-
+from linkedin_v2.linkedin import (LinkedInAuthentication, LinkedInApplication,
+                                  PERMISSIONS)
 
 if __name__ == '__main__':
     API_KEY = 'wFNJekVpDCJtRPFX812pQsJee-gt0zO4X5XmG6wcfSOSlLocxodAXNMbl0_hw3Vl'
@@ -8,5 +7,5 @@ if __name__ == '__main__':
     RETURN_URL = 'http://localhost:8000'
     authentication = LinkedInAuthentication(API_KEY, API_SECRET, RETURN_URL,
                                             PERMISSIONS.enums.values())
-    print authentication.authorization_url
+    print(authentication.authorization_url)
     application = LinkedInApplication(authentication)
